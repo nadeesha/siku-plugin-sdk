@@ -22,7 +22,7 @@ export interface IEvent {
 }
 
 export interface IPluginDefinition<PluginUserConfig extends {}> {
-    getAuthorizationUrl: () => string;
+    getAuthorizationUrl: () => Promise<string>;
     getAccessToken: <AuthResponse extends {}>(authResponse: AuthResponse) => Promise<string>;
     editUserConfig: () => Promise<PluginUserConfig>;
     getEvents: () => Promise<IEvent[]>;
