@@ -33,4 +33,4 @@ export interface IPluginDefinition<PluginUserConfig extends {}> {
     };
 }
 
-export type PluginGenerator = <PluginUserConfig>(utils: IUtils, pluginConfig: IPluginConfig, userConfig: PluginUserConfig) => IPluginDefinition<PluginUserConfig>;
+export type PluginGenerator<PluginUserConfig> = (utils: IUtils, pluginConfig: IPluginConfig, userConfig: PluginUserConfig) => IPluginDefinition<PluginUserConfig>;
