@@ -2,8 +2,8 @@ import * as _ from 'lodash';
 import * as moment from 'moment';
 
 export interface IUtils {
-  get: (url: string, headers: any) => Promise<Response>;
-  post: (url: string, headers: any, body: any) => Promise<Response>;
+  get: <ResponseBody>(url: string, headers: any) => Promise<ResponseBody>;
+  post: <ResponseBody>(url: string, headers: any, body: any) => Promise<ResponseBody>;
   _: typeof _;
   moment: typeof moment;
 }
